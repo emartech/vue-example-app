@@ -1,4 +1,4 @@
-import Vue from 'vue'
+import Vue from 'vue';
 import Vuex from 'vuex';
 import GiphyFetcher from '../libraries/giphy/fetcher';
 
