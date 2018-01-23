@@ -8,6 +8,19 @@
   <br>
 </p>
 
+# Table of Contents
+  * [Build Setup](#build-setup)
+  * [Practices](#practices)
+    * [General guidelines](#general-guidelines)
+    * [1. Use Vuex](#1-use-vuex)
+    * [2. Create Vuex store using a Factory](#2-create-vuex-store-using-a-factory)
+    * [3. Test Vuex as you use it](#3-test-vuex-as-you-use-it)
+    * [4. Use the vue-test-utils library to test components easier](#4-use-the-vue-test-utils-library-to-test-components-easier)
+    * [5. Don't mock Vuex store in the component tests](#5-dont-mock-vuex-store-in-the-component-tests)
+    * [6. Use Vuex helpers](#6-use-vuex-helpers)
+    * [7. Separate template and implementation code](#7-dumb-components)
+    * [+1 Use async-await](#1-use-async-await)
+  * [Todo](#todo)
 
 ## Build Setup
 
@@ -121,7 +134,7 @@ describe('search', () => {
 
 You can make [fake implementations](https://github.com/emartech/vue-example-app/blob/master/test/unit/fake-giphy-fetcher.js) for testing purposes of a class by using the same interface.
 
-### 3. Test Vuex as you use it!
+### 3. Test Vuex as you use it
 One golden rule in testing is to test an entity as close as possible to its real usage pattern. If you expose a Vuex internal, such as a mutation or action function and test the behaviour by calling it explicitly then you will lose the context what you have in the implementation where you are using a real Store. 
 
 To make it worse, an action can use other actions and mutations and very likely it uses the others through a `commit` or `dispatch` call. In this case, why don't you use these methods in the first place? **Test Vuex states, mutations, getters and actions through the Store instance using `store.state`, `store.getters`, `store.commit('...')` and `store.dispatch('...'')`**. Check the [general store](https://github.com/emartech/vue-example-app/blob/master/test/unit/specs/store/store.spec.js) and [action](https://github.com/emartech/vue-example-app/blob/master/test/unit/specs/store/actions.spec.js) spec files.
