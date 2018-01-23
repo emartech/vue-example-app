@@ -3,7 +3,7 @@
 > This application is created to propagate the best practices of developing and testing similar Vue applications.
 
 <p align="center">
-  <img src="https://www.dropbox.com/s/u44y96p4si26jsp/emagif.gif?raw=1" width="600" />
+  <img src="https://www.dropbox.com/s/8hp8d8fczqnz6e7/emagif2.gif?raw=1" width="600" />
 </p>
 
 
