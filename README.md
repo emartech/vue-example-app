@@ -112,6 +112,8 @@ describe('search', () => {
 });
 ```
 
+You can make [fake implementations](https://github.com/emartech/vue-example-app/blob/master/test/unit/fake-giphy-fetcher.js) for testing purposes of a class by using the same interface.
+
 ### 3. Test Vuex as you use it!
 One golden rule in testing is to test an entity as close as possible to its real usage pattern. If you expose a Vuex internal, such as a mutation or action function and test the behaviour by calling it explicitly then you will lose the context what you have in the implementation where you are using a real Store. 
 
