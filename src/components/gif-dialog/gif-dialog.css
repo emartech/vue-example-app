@@ -1,0 +1,11 @@
+img {
+    max-width: 640px;
+    max-height: 480px;
+    min-width: 200px;
+    min-height: 200px;
+}
+
+a, a:visited, img {
+    display: block;
+    margin: auto;
+}

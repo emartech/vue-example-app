@@ -1,0 +1,17 @@
+<div>
+  <h2>Found items</h2>
+
+  <p id="data-panel-subtitle" v-if="!searchTerm">If you've searched for something, here you can see some related gifs!</p>
+  <p id="data-panel-subtitle" v-else>Search results for "{{ searchTerm }}"</p>
+
+  <div class="e-card e-card-small e-card-no_title" v-for="gif in gifs" @click="selectGif(gif)">
+    <e-dialoghandler dialog="#gif-dialog">
+      <div class="e-card__content">
+        <img class="e-card__preview" :src="gif.previewUrl">
+      </div>
+    </e-dialoghandler>
+  </div>
+
+  <gif-dialog :gif="selectedGif"></gif-dialog>
+
+</div>

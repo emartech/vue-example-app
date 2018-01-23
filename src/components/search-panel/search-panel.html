@@ -1,0 +1,23 @@
+<div>
+  <h2>Search</h2>
+  <div class="e-field e-field-fixwidth">
+    <label class="e-field__label">What do you want to search for?</label>
+    <div class="e-field__postfix">
+
+      <span class="e-field__postfix__cell">
+        <input id="search-panel-search-field"
+               class="e-input"
+               placeholder="Eg. Cats"
+               :value="searchTerm"
+               @input="search($event.target.value)">
+      </span>
+
+      <span class="e-field__postfix__cell e-field__postfix__cell-short e-field__postfix__cell-shortsticky">
+        <button id="search-panel-random-button"
+                class="e-btn"
+                @click="searchRandom">I'm Feeling Lucky!</button>
+      </span>
+
+    </div>
+  </div>
+</div>
