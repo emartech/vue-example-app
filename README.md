@@ -2,9 +2,10 @@
 
 > This application is created to propagate the best practices of developing and testing similar Vue applications.
 
-<div style="text-align:center">
-    <img src ="https://dl.dropboxusercontent.com/content_link/4tRs3PJpTaoQuKp2lnZFmpWGdX27rJs7xwU7SPvRDHgvSxTrE1Rpky1YasId4ppQ/file" />
-</div>
+<p align="center">
+  <img src="https://dl.dropboxusercontent.com/content_link/4tRs3PJpTaoQuKp2lnZFmpWGdX27rJs7xwU7SPvRDHgvSxTrE1Rpky1YasId4ppQ/file" width="600" />
+</p>
+
 
 ## Build Setup
 
