@@ -25,6 +25,9 @@ npm test
 ```
 
 ## Practices
+#### General guidelines
+- Do not use test doubles (mocks, stubs, spies, etc.) unless there is no other way or very hard to test the related entity. The danger of mocking is that you lose the connection between the real usage and the test context and you can make hard-to-find bugs without breaking any tests after a simple refactoring. "Mock objects can give you a deceptive sense of confidence, and that's why you should avoid them unless there is really no alternative.", said Cedric Beust.  
+- Always keep tests and code simple. Use idiomatic solutions (eg. Vuex test helpers, map functions, etc.)
 
 ### 1. Use Vuex
 As it's very easy to integrate Vuex and it provides a clear and simple architecture to your application, it should be used for simple projects as well without too much thinking.
@@ -78,3 +81,38 @@ export const createStore = function(libraries) {
   })
 };
 ```
+
+Now it's [easy to fake dependencies](https://github.com/emartech/vue-example-app/blob/master/test/unit/specs/store/actions.spec.js) which are hard to test, eg. request libraries or random-generators.
+
+```javascript
+describe('setSearchTerm', () => {
+  it('should set the search term', () => {
+    // CREATE STORE WITH DEFAULT DEPENDENCIES
+    const store = createStore();
+    store.commit('setSearchTerm', 'test term');
+    expect(store.state.searchTerm).to.eql('test term');
+  });
+});
+
+describe('search', () => {
+  it('should set the @searchTerm and fetch related gifs into @gifs', async () => {
+    const fakeGiphyFetcher = { searchFor: sinon.stub() }
+
+    // CREATE STORE WITH A FAKE REQUEST LIBRARY
+    const store = createStore({
+      giphyFetcher: fakeGiphyFetcher
+    });
+
+    fakeGiphyFetcher.searchFor.withArgs('My title').returns(Promise.resolve(SAMPLE_GIFS));
+    await store.dispatch('search', 'My title');
+    
+    expect(store.state.gifs).to.eql(SAMPLE_GIFS);
+  });
+});
+```
+
+### 3. Test Vuex as you use it!
+One golden rule in testing is to test an entity as close as possible to it's real usage pattern. If you expose a Vuex internal, such as a mutation or action function and test the behaviour by calling it explicitly then you will lose the context what you have in the implementation where you are using a real Store. 
+
+To make it worse, an action can use other actions and mutations and very likely it uses the others through a `commit` or `dispatch` call. In this case, why don't you use these methods in the first place? **Test Vuex states, mutations, getters and actions through the Store instance using `store.state`, `store.getters`, `store.commit('...')` and `store.dispatch('...'')`**. Check the [general store](https://github.com/emartech/vue-example-app/blob/master/test/unit/specs/store/store.spec.js) and [action](https://github.com/emartech/vue-example-app/blob/master/test/unit/specs/store/actions.spec.js) spec files.
+ 
