@@ -31,7 +31,7 @@ npm test
 - Less code means that you have to read and understand less. Of course, it's only true if you keep your code readable! Do not satisfy readable code in favor of "so-called" elegant, short but hard to understand one.
 
 ### 1. Use Vuex
-As it's very easy to integrate Vuex and it provides a clear and simple architecture to your application, it should be used for simple projects as well without too much thinking.
+As it's very easy to integrate and it provides a clear and simple architecture to your application, Vuex should be used for simple projects as well without too much thinking.
 
 ### 2. Create Vuex store using a Factory
 It can help a lot in testing if the Vuex store is not a singleton entity in your application:
