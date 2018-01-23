@@ -1,6 +1,6 @@
-# Vue Example Application
+# EmaGif, a Vue Example Application
 
-> This application is created to propagate the best practices of developing and testing similar Vue applications.
+> This application is created to propagate the best practices of developing and testing Vue applications. It implements a simple gif searcher where you can fetch gifs from Giphy based on your criteria and also you can get images for random terms.
 
 <p align="center">
   <img src="https://www.dropbox.com/s/8hp8d8fczqnz6e7/emagif2.gif?raw=1" width="600" />
