@@ -18,7 +18,8 @@
     * [4. Use the vue-test-utils library to test components easier](#4-use-the-vue-test-utils-library-to-test-components-easier)
     * [5. Don't mock Vuex store in the component tests](#5-dont-mock-vuex-store-in-the-component-tests)
     * [6. Use Vuex helpers](#6-use-vuex-helpers)
-    * [7. Separate template and implementation code](#7-dumb-components)
+    * [7. Dumb components](#7-dumb-components)
+    * [8. Separate template and implementation code](#8-separate-template-and-implementation-code)
     * [+1 Use async-await](#1-use-async-await)
   * [Todo](#todo)
 
@@ -261,7 +262,7 @@ Try to maximize the number of the dumb components as it's easier to manage and r
 
 In this example application we are using one dumb component, the [`GifDialog`](https://github.com/emartech/vue-example-app/blob/master/src/components/gif-dialog/gif-dialog.vue). Note that [you have to define the properties](https://github.com/emartech/vue-example-app/blob/5c38259780510872743505e88538a1aa5414ba81/test/unit/specs/components/gif-dialog.spec.js#L19) before bootstrapping it in the tests.
 
-### 7. Separate template and implementation code
+### 8. Separate template and implementation code
 If you'd like to follow the Separation of Concerns principle then it's good to know that you can easily [move the template and style codes](https://github.com/emartech/vue-example-app/blob/5c38259780510872743505e88538a1aa5414ba81/src/components/data-panel/data-panel.vue#L2) out of the `vue` files to separate ones.
 
 **[Data Panel Component](https://github.com/emartech/vue-example-app/blob/master/src/components/data-panel/data-panel.vue)**
