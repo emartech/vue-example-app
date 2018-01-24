@@ -243,7 +243,7 @@ export default {
     
     ...mapActions({
         searchCustomRandom: (dispatch) => {
-          const randomIndex = Math.floor(Math.random()*5);
+          const randomIndex = Math.floor(Math.random() * 2);
           const thingies = ['dogs in bed', 'cat apocalypse'];
           dispatch('search', [thingies][randomIndex]);
         } 
