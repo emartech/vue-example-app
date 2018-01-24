@@ -86,11 +86,15 @@ export const createStore = function(libraries) {
   return new Vuex.Store({
     state: {
       searchTerm: '',
+      gifs: []
     },
 
     mutations: {
       setSearchTerm(state, searchTerm) {
         state.searchTerm = searchTerm;
+      },
+      setGifs(state, gifs) {
+        state.gifs = gifs;
       }
     },
 
