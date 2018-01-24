@@ -315,3 +315,4 @@ it('should reflect the Store changes', async () => {
 
 - [ ] `localVue` usage instead of polluting the original `Vue` instance
 - [ ] E2E Tests, eg. Cypress or Testcafe
+- [ ] Vue Router and Vuex integration and testing
