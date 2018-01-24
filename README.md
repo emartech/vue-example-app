@@ -317,3 +317,4 @@ it('should reflect the Store changes', async () => {
 - [ ] E2E Tests, eg. Cypress or Testcafe
 - [ ] Vue Router and Vuex integration and testing
 - [ ] JWT token and authentication
+- [ ] Keep test files with the original files and omit .spec.js files from coverage report
