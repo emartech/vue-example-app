@@ -6,7 +6,7 @@ describe('App Component', () => {
 
   it('should render header', () => {
     const component = shallow(App, { store: createStore() });
-    expect(component.find('h1').text()).to.equal('EmaGif, the Vue.js Sample App');
+    expect(component.find('h1').text()).to.equal('EmaGif, a Vue Example App');
   });
 
 });
