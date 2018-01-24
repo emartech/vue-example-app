@@ -60,7 +60,7 @@ It can help a lot in testing if the Vuex store is not a singleton entity in your
 1. You can recreate a new Store with the predefined settings and extensions anytime in any test
 2. You can pass dependencies into it and it can help a lot to fake or mock hard-to-test dependencies (eg. a request library).
 
-**[Sample Vuex Store with Factory Method](https://github.com/emartech/vue-example-app/blob/master/src/store/store.js)**
+**[Sample Vuex Store with Factory Method and Dependency Injection](https://github.com/emartech/vue-example-app/blob/master/src/store/store.js)**
 ```javascript
 import Vue from 'vue';
 import Vuex from 'vuex';
