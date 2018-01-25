@@ -20,6 +20,7 @@
     * [6. Use Vuex helpers](#6-use-vuex-helpers)
     * [7. Dumb components](#7-dumb-components)
     * [8. Separate template and implementation code](#8-separate-template-and-implementation-code)
+    * [9. Do not use Router unless you really need it](#9-do-not-use-router-unless-you-really-need-it)
     * [+1 Use async-await](#1-use-async-await)
   * [Todo](#todo)
 
