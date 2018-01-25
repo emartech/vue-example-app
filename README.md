@@ -297,6 +297,9 @@ module: {
 },
 ```
 
+### 9. Do not use Router unless you really need it
+It seems to be a good idea at first to use the Vue router but think it twice. It can make your application more complex as it's not straightforward to implement the two-way integration with the Vuex store and you have to make workarounds. It's not likely that your project needs the actual page linkable, especially if it is rendered in an iframe. You can easily replace the "page" handling with multiple high level components and a simple property in the Vuex store which tells what main component is active.
+
 
 ### +1 Use async-await
 Instead of using Promises, you can always use `async` functions and `await` for async operations including Promise executions. It applies to the tests as well:
