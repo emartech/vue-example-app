@@ -4,6 +4,7 @@
   "description": "Example application",
   "author": "andras.fincza@emarsys.com",
   "private": true,
+  "license": "MIT",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
     "start": "npm run dev",
